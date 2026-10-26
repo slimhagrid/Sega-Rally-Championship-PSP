@@ -1,0 +1,591 @@
+# original address, file ('-' = stubbed in the oracle and in the port), name
+0x060051fc sat.c sync_vout
+0x06005202 sat.c sync_dsp
+0x06005208 sat.c sync_vin
+0x0600520c sat.c sync
+0x0600521c sat.c intm_sync
+0x06005230 sat.c ints_sync
+0x06004ce4 sat.c vint_in
+0x06005148 sat.c vint_out
+0x06005674 satlib.c rcopy
+0x06005682 satlib.c rcopyw
+0x06005690 satlib.c rfill
+0x0600569c satlib.c rfillf
+0x060056a0 satlib.c rfillff
+0x060159dc satlib.c set_mov_scr
+0x06015a14 satlib.c set_mov_scri
+0x06015afc satlib.c init_mov_scri
+0x06015b08 satlib.c set_window_scr
+0x06015b40 satlib.c set_window_scri
+0x06015b74 satlib.c init_window_scri
+0x060159bc satlib.c set_scr_int
+0x060159cc satlib.c init_scr_int
+0x06015fec satlib.c set_grpara_int
+0x06016044 satlib.c set_grpara_int2p
+0x06016058 satlib.c set_rpara_int
+0x060160b4 satlib.c init_rpara_int
+0x06005580 satlib.c tv_off_boot
+0x06005560 satlib.c tv_off
+0x0600553c satlib.c tv_on
+0x060054b0 satlib.c init_vdp1sys
+0x06005502 satlib.c init_vdp1sys2
+0x06005518 satlib.c init_vdp2sys
+0x060053ec satlib.c init_vram
+0x06005408 satlib.c vram_allclr
+0x06005a18 satlib.c pad_read
+0x06004000 sat_boot.c poweron_start
+0x0600410c sat_boot.c main_init
+0x06004158 sat_boot.c mainv_loop
+0x06004180 sat_boot.c mainv_load
+0x060059b0 sat_boot.c swclear
+0x060053b8 sat_boot.c pad_kind
+0x06005310 sat_boot.c pad_kind_init
+0x060052b4 sat_boot.c init_smpcif
+0x06004b20 sat_boot.c init_nclram
+0x0601f844 sat_boot.c watanabe_init
+0x0602d4d4 sat_boot.c record_sel_init
+0x060041c0 sat_boot.c init_alwram
+0x0601a7f4 sat_boot.c init_texture
+0x060058f0 sat_boot.c get_time
+0x06004aec sat_boot.c cd_file_init
+0x06004b14 sat_boot.c cd_file_init_r
+0x06005254 - init_system
+0x060052a8 - int_mask_set
+0x0600525c - init_vect_slave
+0x06017b90 - set_slave_exec
+0x06017bac - wait_slave_end
+0x06017ab0 - slave_start
+0x06017b28 - initial_slave
+0x06005934 - cd_open_check
+0x06005914 - cd_open_check2
+0x06005974 - cd_open_checkg
+0x06005b2a - sw_reset
+0x06015fbc - sound_clr_hscr_rr
+0x06015fc8 - sound_set_tp_rr
+0x06015fec - sound_set_grpara_int
+0x06016044 - sound_set_grpara_int2p
+0x06016058 - sound_set_rpara_int
+0x060160b4 - sound_init_rpara_int
+0x060160c4 - sound_set_rpara
+0x0601625c - sound_calc_rscroll
+0x0601633c - sound_game_se_set
+0x060163ec - sound_game_se_set2p
+0x0601646c - sound_FUN_0601646c
+0x06016588 - sound_FUN_06016588
+0x060165a4 - sound_FUN_060165a4
+0x060167c0 - sound_FUN_060167c0
+0x06016858 - sound_FUN_06016858
+0x060168a4 - sound_FUN_060168a4
+0x06016918 - sound_FUN_06016918
+0x06016928 - sound_road_noise_fpsd
+0x06016998 - sound_FUN_06016998
+0x06016a10 - sound_kansei_se_set
+0x06016a20 - sound_init_game_se
+0x06016ad4 - sound_replay_sdctrl
+0x06016b74 - sound_FUN_06016b74
+0x06016c3c - sound_FUN_06016c3c
+0x06016cf4 - sound_FUN_06016cf4
+0x06016d70 - sound_FUN_06016d70
+0x06016d84 - sound__res_ei
+0x06016d90 - sound_FUN_06016d90
+0x06016da4 - sound_FUN_06016da4
+0x06016e7a - sound__SoundOff
+0x06016f04 - sound_FUN_06016f04
+0x06016f10 - sound_FUN_06016f10
+0x06016f20 - sound__gfc_load
+0x06016f24 - sound_FUN_06016f24
+0x06016f30 - sound_FUN_06016f30
+0x06016f3c - sound_FUN_06016f3c
+0x06016f60 - sound_FUN_06016f60
+0x06016f70 - sound_FUN_06016f70
+0x06016fa4 - sound_FUN_06016fa4
+0x06016fbc - sound_FUN_06016fbc
+0x06016fd0 - sound_FUN_06016fd0
+0x06017038 - sound__gfcsub_bpe
+0x0601704c - sound_FUN_0601704c
+0x06017080 - sound_FUN_06017080
+0x0601708c - sound_FUN_0601708c
+0x060170c4 - sound_FUN_060170c4
+0x06017174 - sound__gfc_ldbpe
+0x06017294 - sound__gfcsub_btrns
+0x060172e8 - sound_FUN_060172e8
+0x0601734c - sound_FUN_0601734c
+0x06017374 - sound__gfc_madload
+0x060173ac - sound_FUN_060173ac
+0x06017418 - sound_FUN_06017418
+0x06017454 - sound_FUN_06017454
+0x060174a8 - sound_FUN_060174a8
+0x06017514 - sound_FUN_06017514
+0x0601753c - sound_FUN_0601753c
+0x06017548 - sound_FUN_06017548
+0x06017570 - sound__gfc_cmdload
+0x06017580 - sound_FUN_06017580
+0x060175a4 - sound_FUN_060175a4
+0x06017628 - sound_FUN_06017628
+0x060176e8 - sound_FUN_060176e8
+0x0601770c - sound_FUN_0601770c
+0x06017764 - sound_FUN_06017764
+0x06017776 - sound__gfc_cdplay
+0x0601779c - sound_FUN_0601779c
+0x06017824 - sound__gfc_cdseek
+0x0601783c - sound_FUN_0601783c
+0x06017846 - sound__gfc_cdseekwait
+0x0601785a - sound_FUN_0601785a
+0x06017886 - sound__gfc_cdstat
+0x06035988 - cc___divls
+0x06035a2c - cc_FUN_06035a2c
+0x06035a3c - cc___modls
+0x06035ae0 - cc_FUN_06035ae0
+0x06035b5e - cc__CDSUB_UpdStatus
+0x06035ba8 - cc_FUN_06035ba8
+0x06035bf0 - cc_FUN_06035bf0
+0x06035c04 - cc_FUN_06035c04
+0x06035c40 - cc_FUN_06035c40
+0x06035c44 - cc___quick_mvn
+0x06035ce8 - cc_FUN_06035ce8
+0x06035d04 - cc___slow_mvn
+0x06035d3c - cc___errno
+0x06035d8c - cc__memcmp
+0x06035da8 - cc_FUN_06035da8
+0x06035de0 - cc_FUN_06035de0
+0x06035e30 - cc__memset
+0x06035e70 - cc_FUN_06035e70
+0x06035ed0 - cc___sta_sftl17
+0x06035ed4 - cc_FUN_06035ed4
+0x06035eea - cc___sta_sftl29
+0x06035ef0 - cc_FUN_06035ef0
+0x06035ef4 - cc___sta_sftl30
+0x06035f38 - cc___sta_sftrl19
+0x06035f3a - cc___sta_sftrl17
+0x06035f40 - cc___sta_sftrl28
+0x06035f42 - cc___sta_sftrl26
+0x06035f44 - cc___sta_sftrl24
+0x06035f4a - cc___sta_sftrl27
+0x06035f4c - cc___sta_sftrl25
+0x06035f4e - cc_FUN_06035f4e
+0x06035f54 - cc___sta_sftrl29
+0x06035f5e - cc___sta_sftrl30
+0x06035f66 - cc___sta_sftrl31
+0x06035f6c - cc___sta_sftra23
+0x06035f6e - cc___sta_sftra22
+0x06035f70 - cc___sta_sftra21
+0x06035f72 - cc___sta_sftra20
+0x06035f74 - cc___sta_sftra19
+0x06035f76 - cc___sta_sftra18
+0x06035f78 - cc___sta_sftra17
+0x06035f7a - cc___sta_sftra16
+0x06035f80 - cc___sta_sftra15
+0x06035f82 - cc___sta_sftra14
+0x06035f84 - cc___sta_sftra13
+0x06035f86 - cc___sta_sftra12
+0x06035f88 - cc___sta_sftra11
+0x06035f8a - cc___sta_sftra10
+0x06035f8c - cc___sta_sftra9
+0x06035f8e - cc___sta_sftra8
+0x06035f90 - cc___sta_sftra7
+0x06035f92 - cc___sta_sftra6
+0x06035f94 - cc___sta_sftra5
+0x06035f96 - cc___sta_sftra4
+0x06035f98 - cc___sta_sftra3
+0x06035f9a - cc___sta_sftra2
+0x06035f9c - cc___sta_sftra1
+0x06035fa0 - cc___sta_sftra28
+0x06035fa2 - cc___sta_sftra27
+0x06035fa4 - cc___sta_sftra26
+0x06035fa6 - cc___sta_sftra25
+0x06035fa8 - cc___sta_sftra24
+0x06035fb0 - syslib___sta_sftra29
+0x06035fc6 - syslib___sta_sftra30
+0x06035fd8 - syslib___sta_sftra31
+0x060360ba - syslib_FUN_060360ba
+0x060360ea - syslib_FUN_060360ea
+0x06036110 - syslib_FUN_06036110
+0x06036142 - syslib_FUN_06036142
+0x0603619c - syslib_FUN_0603619c
+0x060361ac - syslib_FUN_060361ac
+0x0603621c - syslib_FUN_0603621c
+0x060363b6 - syslib_FUN_060363b6
+0x06036ba0 - syslib_FUN_06036ba0
+0x06036bb8 - syslib_FUN_06036bb8
+0x06036bec - syslib_FUN_06036bec
+0x06036c24 - syslib_FUN_06036c24
+0x06036c9c - syslib_FUN_06036c9c
+0x06036cf8 - syslib_FUN_06036cf8
+0x06036d6c - syslib_FUN_06036d6c
+0x06036dc8 - syslib_FUN_06036dc8
+0x06036de6 - syslib_FUN_06036de6
+0x06036e14 - syslib_FUN_06036e14
+0x06036e5e - syslib_FUN_06036e5e
+0x06037094 - syslib_FUN_06037094
+0x0603717c - syslib_FUN_0603717c
+0x06037218 - syslib_FUN_06037218
+0x06037274 - syslib_FUN_06037274
+0x060373ee - syslib_FUN_060373ee
+0x06037488 - syslib_FUN_06037488
+0x0603754e - syslib_FUN_0603754e
+0x060375d2 - syslib_FUN_060375d2
+0x0603761c - syslib_FUN_0603761c
+0x06037680 - syslib_FUN_06037680
+0x060377b0 - syslib_FUN_060377b0
+0x06037818 - syslib_FUN_06037818
+0x0603788c - syslib_FUN_0603788c
+0x0603797e - syslib_FUN_0603797e
+0x06037a68 - syslib_FUN_06037a68
+0x06037ad0 - syslib_FUN_06037ad0
+0x06037afa - syslib_FUN_06037afa
+0x06037c74 - syslib_FUN_06037c74
+0x06037cd0 - syslib_FUN_06037cd0
+0x06037d28 - syslib_FUN_06037d28
+0x06037e74 - syslib_FUN_06037e74
+0x06037e86 - syslib_FUN_06037e86
+0x06037e9e - syslib_FUN_06037e9e
+0x06037ed0 - syslib_FUN_06037ed0
+0x06037f90 - syslib_FUN_06037f90
+0x06037fbc - syslib_FUN_06037fbc
+0x06038042 - syslib_FUN_06038042
+0x060380bc - syslib_FUN_060380bc
+0x06038100 - syslib_FUN_06038100
+0x06038106 - syslib_FUN_06038106
+0x06038184 - syslib_FUN_06038184
+0x060381b2 - syslib_FUN_060381b2
+0x060381ec - syslib_FUN_060381ec
+0x0603821e - syslib_FUN_0603821e
+0x06038278 - syslib_FUN_06038278
+0x060382c6 - syslib_FUN_060382c6
+0x060383ac - syslib_FUN_060383ac
+0x06038466 - syslib_FUN_06038466
+0x060384e0 - syslib_FUN_060384e0
+0x06038580 - syslib_FUN_06038580
+0x06038688 - syslib_FUN_06038688
+0x060386c2 - syslib_FUN_060386c2
+0x0603871a - syslib_FUN_0603871a
+0x06038754 - syslib_FUN_06038754
+0x06038760 - syslib_FUN_06038760
+0x060387ae - syslib_FUN_060387ae
+0x0603883c - syslib_FUN_0603883c
+0x06038878 - syslib_FUN_06038878
+0x060388c0 - syslib_FUN_060388c0
+0x06038922 - syslib_FUN_06038922
+0x060389e8 - syslib_FUN_060389e8
+0x06038a20 - syslib_FUN_06038a20
+0x06038a5c - syslib_FUN_06038a5c
+0x06038a6a - syslib_FUN_06038a6a
+0x06038ac2 - syslib_FUN_06038ac2
+0x06038ba0 - syslib_FUN_06038ba0
+0x06038bf8 - syslib_FUN_06038bf8
+0x06038c4c - syslib_FUN_06038c4c
+0x06038d18 - syslib_FUN_06038d18
+0x06038d78 - syslib_FUN_06038d78
+0x06038dd8 - syslib_FUN_06038dd8
+0x06038e16 - syslib_FUN_06038e16
+0x06038e96 - syslib_FUN_06038e96
+0x06038f0c - syslib_FUN_06038f0c
+0x06038f12 - syslib_FUN_06038f12
+0x06038f18 - syslib_FUN_06038f18
+0x06038f2c - syslib_FUN_06038f2c
+0x06038f40 - syslib_FUN_06038f40
+0x06038f52 - syslib_FUN_06038f52
+0x06038f7c - syslib_FUN_06038f7c
+0x06038fe2 - syslib_FUN_06038fe2
+0x06039020 - syslib_FUN_06039020
+0x060390c8 - syslib_FUN_060390c8
+0x060390fa - syslib_FUN_060390fa
+0x06039128 - syslib_FUN_06039128
+0x0603914c - syslib_FUN_0603914c
+0x060391bc - syslib_FUN_060391bc
+0x06039218 - syslib_FUN_06039218
+0x0603922c - syslib_FUN_0603922c
+0x0603923e - syslib_FUN_0603923e
+0x06039252 - syslib_FUN_06039252
+0x06039268 - syslib_FUN_06039268
+0x0603926c - syslib_FUN_0603926c
+0x060392e8 - syslib_FUN_060392e8
+0x06039356 - syslib_FUN_06039356
+0x060393fc - syslib_FUN_060393fc
+0x06039424 - syslib_FUN_06039424
+0x060394f8 - syslib_FUN_060394f8
+0x06039514 - syslib_FUN_06039514
+0x06039534 - syslib_FUN_06039534
+0x06039578 - syslib_FUN_06039578
+0x060395bc - syslib_FUN_060395bc
+0x060395d8 - syslib_FUN_060395d8
+0x06039650 - syslib_FUN_06039650
+0x06039976 - syslib_FUN_06039976
+0x060399b2 - syslib_FUN_060399b2
+0x060399cc - syslib_FUN_060399cc
+0x060399ec - syslib_FUN_060399ec
+0x06039a14 - syslib_FUN_06039a14
+0x06039a3c - syslib_FUN_06039a3c
+0x06039a72 - syslib_FUN_06039a72
+0x06039a7e - syslib_FUN_06039a7e
+0x06039a82 - syslib_FUN_06039a82
+0x06039ad4 - syslib_FUN_06039ad4
+0x06039ada - syslib_FUN_06039ada
+0x06039ae6 - syslib_FUN_06039ae6
+0x06039b7c - syslib_FUN_06039b7c
+0x06039bfe - syslib_FUN_06039bfe
+0x06039c72 - syslib_FUN_06039c72
+0x06039d70 - syslib_FUN_06039d70
+0x06039de8 - syslib_FUN_06039de8
+0x06039f00 - syslib_FUN_06039f00
+0x0603a088 - syslib_FUN_0603a088
+0x0603a0ce - syslib_FUN_0603a0ce
+0x0603a124 - syslib_FUN_0603a124
+0x0603a20c - syslib_FUN_0603a20c
+0x0603a28c - syslib_FUN_0603a28c
+0x0603a2d0 - syslib_FUN_0603a2d0
+0x0603a2e2 - syslib_FUN_0603a2e2
+0x0603a310 - syslib_FUN_0603a310
+0x0603a334 - syslib_FUN_0603a334
+0x0603a34c - syslib_FUN_0603a34c
+0x0603a3f0 - syslib_FUN_0603a3f0
+0x0603a4e2 - syslib_FUN_0603a4e2
+0x0603a518 - syslib_FUN_0603a518
+0x0603a75c - syslib_FUN_0603a75c
+0x0603a870 - syslib_FUN_0603a870
+0x0603a8ba - syslib_FUN_0603a8ba
+0x0603a990 - syslib_FUN_0603a990
+0x0603a9ce - syslib_FUN_0603a9ce
+0x0603aa54 - syslib_FUN_0603aa54
+0x0603ab9c - syslib_FUN_0603ab9c
+0x0603ac88 - syslib_FUN_0603ac88
+0x0603aca0 - syslib_FUN_0603aca0
+0x0603ad98 - syslib_FUN_0603ad98
+0x0603adb0 - syslib_FUN_0603adb0
+0x0603adc8 - syslib_FUN_0603adc8
+0x0603ae18 - syslib_FUN_0603ae18
+0x0603b070 - syslib_FUN_0603b070
+0x0603b082 - syslib_FUN_0603b082
+0x0603b0ca - syslib_FUN_0603b0ca
+0x0603b0f0 - syslib_FUN_0603b0f0
+0x0603b108 - syslib_FUN_0603b108
+0x0603b118 - syslib_FUN_0603b118
+0x0603b14e - syslib_FUN_0603b14e
+0x0603b360 - syslib_FUN_0603b360
+0x0603b3ac - syslib_FUN_0603b3ac
+0x0603b3da - syslib_FUN_0603b3da
+0x0603b408 - syslib_FUN_0603b408
+0x0603b48c - syslib_FUN_0603b48c
+0x0603b4b2 - syslib_FUN_0603b4b2
+0x0603b4f0 - syslib_FUN_0603b4f0
+0x0603b516 - syslib_FUN_0603b516
+0x0603b53c - syslib_FUN_0603b53c
+0x0603b61a - syslib_FUN_0603b61a
+0x0603b67a - syslib_FUN_0603b67a
+0x0603b6e4 - syslib_FUN_0603b6e4
+0x0603b750 - syslib_FUN_0603b750
+0x0603b7a4 - syslib_FUN_0603b7a4
+0x0603b7ea - syslib_FUN_0603b7ea
+0x0603b844 - syslib_FUN_0603b844
+0x0603b864 - syslib_FUN_0603b864
+0x0603b8e0 - syslib_FUN_0603b8e0
+0x0603ba28 - syslib_FUN_0603ba28
+0x0603baa8 - syslib_FUN_0603baa8
+0x0603bba0 - syslib_FUN_0603bba0
+0x0603bc7c - syslib_FUN_0603bc7c
+0x0603bcb0 - syslib_FUN_0603bcb0
+0x0603bda2 - syslib_FUN_0603bda2
+0x0603be1a - syslib_FUN_0603be1a
+0x0603be76 - syslib_FUN_0603be76
+0x0603be7e - syslib_FUN_0603be7e
+0x0603beb0 - syslib_FUN_0603beb0
+0x0603c048 - syslib_FUN_0603c048
+0x0603c0b4 - syslib_FUN_0603c0b4
+0x0603c204 - syslib_FUN_0603c204
+0x0603c294 - syslib_FUN_0603c294
+0x0603c3b4 - syslib_FUN_0603c3b4
+0x0603c4e4 - syslib_FUN_0603c4e4
+0x0603c6c2 - syslib_FUN_0603c6c2
+0x0603c85c - syslib_FUN_0603c85c
+0x0603c888 - syslib_FUN_0603c888
+0x0603c902 - syslib_FUN_0603c902
+0x0603c93c - syslib_FUN_0603c93c
+0x0603c95a - syslib_FUN_0603c95a
+0x0603c974 - syslib_FUN_0603c974
+0x0603c9a0 - syslib_FUN_0603c9a0
+0x0603c9b2 - syslib_FUN_0603c9b2
+0x0603c9b6 - syslib_FUN_0603c9b6
+0x0603c9c8 - syslib_FUN_0603c9c8
+0x0603ca38 - syslib_FUN_0603ca38
+0x0603ca7c - syslib_FUN_0603ca7c
+0x0603cb80 - syslib_FUN_0603cb80
+0x0603cbb0 - syslib_FUN_0603cbb0
+0x0603cc0c - syslib_FUN_0603cc0c
+0x0603cc5c - syslib_FUN_0603cc5c
+0x0603cca8 - syslib_FUN_0603cca8
+0x0603ccf4 - syslib_FUN_0603ccf4
+0x0603ce70 - syslib_FUN_0603ce70
+0x0603ceb0 - syslib_FUN_0603ceb0
+0x0603cf08 - syslib_FUN_0603cf08
+0x0603d050 - syslib_FUN_0603d050
+0x0603d0f4 - syslib_FUN_0603d0f4
+0x0603d1b4 - syslib_FUN_0603d1b4
+0x0603d274 - syslib_FUN_0603d274
+0x0603d356 - syslib_FUN_0603d356
+0x0603d3a4 - syslib_FUN_0603d3a4
+0x0603d3f4 - syslib_FUN_0603d3f4
+0x0603d4ac - syslib_FUN_0603d4ac
+0x0603d4f8 - syslib_FUN_0603d4f8
+0x0603d540 - syslib_FUN_0603d540
+0x0603d634 - syslib_FUN_0603d634
+0x0603d646 - syslib_FUN_0603d646
+0x0603d676 - syslib_FUN_0603d676
+0x0603d684 - syslib_FUN_0603d684
+0x0603d6e4 - syslib_FUN_0603d6e4
+0x0603d7b4 - syslib_FUN_0603d7b4
+0x060101b8 - 3d_dispcar_init  # dispcar
+0x060101e8 - 3d_dispCar  # dispcar
+0x06010214 - 3d_dispGhost  # dispcar
+0x060104f4 - 3d_dispSelectCar2  # dispcar
+0x060104fc - 3d_dispSelectCar  # dispcar
+0x06010674 - 3d_dispTachoMeter_2p  # dispcar
+0x06010680 - 3d_dispTachoMeter  # dispcar
+0x06010710 - 3d_dispCountDown  # dispcar
+0x06015870 menu_arcade.c bpe_expand  # extract: ported (the arcade screens' SCRL_SLT.DAT graphics are BPE blocks expanded at run time)
+0x06015978 - 3d_bpeset  # extdata
+0x0601597a - 3d_bpeset2  # extdata
+0x06017a34 - 3d__bpe_res_cnt  # gf_sub
+0x06017cac - 3d_set_error_vector  # error
+0x06017d18 - 3d_initial_matrix  # matrix
+0x06017d24 - 3d_unit_matrix  # matrix
+0x06017d4c - 3d_push_matrix  # matrix
+0x06017d84 - 3d_pop_matrix  # matrix
+0x06017d88 - 3d_copy_matrix  # matrix
+0x06017dbc - 3d_translate2  # matrix
+0x06017dd0 - 3d_translate  # matrix
+0x06017df4 - 3d_translate_xy  # matrix
+0x06017e18 - 3d_translate_xz  # matrix
+0x06017e40 - 3d_translate_yz  # matrix
+0x06017e68 - 3d_translate_x  # matrix
+0x06017e84 - 3d_translate_y  # matrix
+0x06017ea0 - 3d_translate_z  # matrix
+0x06017ebc - 3d_scale  # matrix
+0x06017eec - 3d_scale_x  # matrix
+0x06017f04 - 3d_scale_y  # matrix
+0x06017f1c - 3d_scale_z  # matrix
+0x06017f34 - 3d_reverse_x  # matrix
+0x06017f48 - 3d_reverse_y  # matrix
+0x06017f5c - 3d_reverse_z  # matrix
+0x06017f70 - 3d_r_rotate_x  # matrix
+0x06017f76 - 3d_rotate_x  # matrix
+0x06017fbc - 3d_r_rotate_y  # matrix
+0x06017fc2 - 3d_rotate_y  # matrix
+0x0601800c - 3d_r_rotate_z  # matrix
+0x06018012 - 3d_rotate_z  # matrix
+0x06018058 - 3d_sincos  # matrix
+0x06018078 - 3d_mul_matrix  # matrix
+0x060180ba - 3d_calc_camera_matrix  # matrix
+0x060180f8 - 3d_t_rotate_x  # matrix
+0x06018118 - 3d_t_rotate_y  # matrix
+0x06018138 - 3d_t_rotate_z  # matrix
+0x06018160 - 3d_purge_matrix  # matrix
+0x06018170 - 3d_get_matrixbuf  # matrix
+0x06018188 - 3d_store_matrix_pointer  # matrix
+0x060181a0 - 3d_restore_matrix_pointer  # matrix
+0x060183d4 - 3d_mkpoly_init  # mkpoly
+0x06018408 - 3d_s_mkpoly_init  # mkpoly
+0x06018418 - 3d_m_mkpoly_init  # mkpoly
+0x060185c0 - 3d_mkpoly_init_2p  # mkpoly
+0x06018634 - 3d_m_mkpoly_frame_init  # mkpoly
+0x0601864a - 3d_s_mkpoly_frame_init  # mkpoly
+0x06018670 - 3d_set_vertice_type  # mkpoly
+0x06018684 - 3d_perspective  # mkpoly
+0x060186a0 - 3d_set_pers_scale  # mkpoly
+0x060186a6 - 3d_set_clip3d_f  # mkpoly
+0x060186d0 - 3d_polyline_on  # mkpoly
+0x060186d8 - 3d_polyline_off  # mkpoly
+0x060186e4 - 3d_set_poly_offset  # mkpoly
+0x060186fc - 3d_DRAW_POLYGON  # mkpoly
+0x06018750 - 3d_draw_course_2p  # mkpoly
+0x060187c0 - 3d_draw_course  # mkpoly
+0x06018908 - 3d_draw_polygon  # mkpoly
+0x06018960 - 3d_draw_polygon2  # mkpoly
+0x060189b8 - 3d_draw_offset_polygon  # mkpoly
+0x06018a10 - 3d_draw_clip_polygon  # mkpoly
+0x06018a7c - 3d_draw_polygon_init  # mkpoly
+0x06018ab8 - 3d_set_object_matrix  # mkpoly
+0x06018ae8 - 3d_set_course_matrix  # mkpoly
+0x06018bac - 3d_get_vertbuf_addr4  # mkpoly
+0x06018bc8 - 3d_get_vertbuf_addr3  # mkpoly
+0x06018d24 - 3d_set_vertice_data  # mkpoly
+0x06018d84 - 3d_chk_revpoly  # mkpoly
+0x06018db4 - 3d_rewrt_chk_revpoly  # mkpoly
+0x06018ebc - 3d_entry_zbuf  # mkpoly
+0x06019016 - 3d_Imm_polygon_func  # mkpoly
+0x060194fc - 3d_calc_vertices  # mkpoly
+0x06019718 - 3d_calc_vertbright  # mkpoly
+0x0601978c - 3d_draw_color_polygon  # mkpoly
+0x06019870 - 3d_draw_people_polygon  # mkpoly
+0x06019936 - 3d_draw_splash_polygon  # mkpoly
+0x06019a08 - 3d_clip2d_4  # clip2d
+0x06019a9c - 3d_clip2d_3  # clip2d
+0x0601a6ec - 3d_init_light  # light
+0x0601a718 - 3d_calc_light  # light
+0x0601a750 - 3d_rotate_light  # light
+0x0601a7d4 - 3d_set_flatgour_tbl  # shading
+0x0601a808 - 3d_setup_texture  # texture
+0x0601a836 - 3d_entry_texture  # texture
+0x0601a8f8 - 3d_set_course_model  # texture
+0x0601aa18 - 3d_set_course_model_2p  # texture
+0x0601ab6c - 3d_set_game_texture  # texture
+0x0601aba2 - 3d_set_car_texture  # texture
+0x0601ad84 - 3d_set_alphabet_model  # texture
+0x0601add8 - 3d_set_select_model  # texture
+0x0601ae4c - 3d_set_ceremony_model  # texture
+0x0601b074 - 3d_zsort  # zsort
+0x0601b220 - 3d_clr_zsortcnt  # zsort
+0x0601b240 - 3d_normal_zsort  # zsort
+0x0601b284 - 3d_game_zsort  # zsort
+0x0601b370 - 3d_game_zsort_2p  # zsort
+0x0601b6b0 - 3d_t_cos  # math
+0x0601b6b4 - 3d_t_sin  # math
+0x0601b764 - 3d_r_sin  # math
+0x0601b76c - 3d_sin  # math
+0x0601b77c - 3d_r_cos  # math
+0x0601b784 - 3d_cos  # math
+0x0601b794 - 3d_r_atan  # math
+0x0601b7c0 - 3d_atan  # math
+0x0601b850 - 3d_distance_2d  # math
+0x0601b8a4 - 3d_distance_3d  # math
+0x0601b8cc - 3d_sqrt  # math
+0x0601b910 - 3d_inner_product  # math
+0x0601b924 - 3d_outer_product  # math
+0x0601b97c - 3d_calc_point  # math
+0x0601b9c4 - 3d_calc_point2  # math
+0x0601ba04 - 3d_bspline  # math
+0x0601ba6c - 3d_get_lookat_angle  # math
+0x0600ef00 - cdfile_600ef00
+0x0600f018 - cdfile_600f018
+0x0600f154 - cdfile_600f154
+0x0600f274 - cdfile_600f274
+0x0600f354 - cdfile_600f354
+0x0600f550 - cdfile_600f550
+0x0600f756 - cdfile_600f756
+0x0600f884 - cdfile_600f884
+0x0600f9b8 - cdfile_600f9b8
+0x0600fa14 - cdfile_600fa14
+0x0600ee8e - cdfile_600ee8e
+0x0601d644 - cdfile_601d644
+0x060183c0 menu_sprite.c entry_zbuf_call  # inlined in draw_sprite
+0x06005b08 satlib.c pad_data  # pad_read's helper: the host supplies the pad words
+0x06023c70 - set_light_obj  # 3D light, drawn by the host
+0x0601d6c8 - rts  # empty routine
+0x060227c8 menu_arcade.c cd_cg_set  # BPE block table (the mode select's disc path loads scatter files instead and does not call it)
+0x0601d5c0 - slave_cache_ctl  # slave job: rewrites the on-chip cache control register 0xFFFFFE92 (hardware, no memory effect)
+0x0602d2b8 - rec_cg_set  # record / result / option pictures from a BPE block table in memory: unused when the disc is the source ([0x060AA803] bit 4: the pictures are scatter files)
+0x0602d310 menu_lib.c cd_map_set  # the same loop as 0x060227E4 (r8 = table, r11 = base)
+0x06015870 - bpe_expand  # BPE block expander, only on the non-disc picture paths
+
+0x06014270 - lap_time_init  # race engine (src/drive.c): called through engine() by the ending; stubbed in tools/scn_ending.py ENGINE
+0x06009938 - carconfig  # race engine: the car's tuning (drive.c)
+0x06005e84 - car_move_ctrl  # race engine: the state functions of the car slots
+0x06006214 - normal_otinit  # race engine: the rival cars' init (opp.c)
+0x06006668 - calc_pmap_sub  # race engine: the player's road blocks (pmap.c)
+0x0600cad0 - otherCtrl  # race engine: the rival cars together (opp.c)
+0x06006030 - normal_plinit  # race engine: slot 0 state function (drive.c); on the PSP the ending's ghost car (menu_ending.c ending_ghost_engine)
+0x060066f8 - ending_plmt_start  # race engine: slot 0 presentation of the replay
+0x0601bcb8 - event_dispatch  # the scenery objects (src/event.c on the host)
+0x0601d410 - hud_marks  # the HUD of the race
+0x0600fc5c - replay_ca  # the chase camera of the replay (camera.c)
+0x0600faf0 - normal_ca  # the chase camera (camera.c)
+0x0601d0e6 - dispcar_tyre_marks  # the tyre marks of dispCar: only with [0x060D0148] != 0 (the race's dispcar_init(1)); menu_ending.c stops if it is set

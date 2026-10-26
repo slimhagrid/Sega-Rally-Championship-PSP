@@ -1,0 +1,7 @@
+# tested with Python 3.9
+numpy>=1.21
+pillow>=9
+scipy>=1.7
+lameenc>=1.4
+# only for the optional 68000 cross-check (tools/m68k_fuzz*.py)
+unicorn>=2.0,<3

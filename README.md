@@ -76,8 +76,8 @@ silent), `--force` redoes done steps.
 
 Everything lands in `extracted/` (git-ignored). `tools/make_data.py` can be run again at any time: steps that are done are skipped.
 
-Optional: put your own picture of the PSP (640 x 400 PNG, magenta = transparent) at `art/psp_pad.png` before the step `pspad` to replace the Saturn pad on the
-KEY CONFIG page. No picture is included here.
+`art/psp_pad.png` (640 x 400, magenta = transparent) is the one picture that is part of this repository: the picture of the PSP that the step `pspad` turns into the replacement for the
+Saturn pad on the KEY CONFIG page. You can put your own at that path before the step runs.
 
 ### 4. Build
 
@@ -87,7 +87,7 @@ bash tools/build.sh
 
 This compiles `EBOOT.PBP` and stages the game folder `dist/SegaRallyPSP/` (`EBOOT.PBP`, `README.txt`, `data/`).
 Optional: put your own `ICON0.png` (144x80), `PIC1.png` (480x272), `PIC0.png`, `SND0.AT3` into `pbp/` before building for the XMB icon and background.
-No artwork is included here, and the game's own art must not be committed.
+No game artwork is included here, and the game's own art must not be committed.
 
 ### 5. Put it on the PSP
 

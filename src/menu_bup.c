@@ -91,10 +91,8 @@ void bup_main_save(void)                                /* 0x0602FC40 */
 {
     /* wait_slave_end() (the slave CPU is not run), interrupts masked */
     if (RS8(0x06042A30 + 3) > 0) {
-        if (menu_rec_guard) menu_rec_guard(1);
         rec_data_expand(0x06041220);
         bup_save_data(0x060EEC00, R8(0x06042A30 + 2));
-        if (menu_rec_guard) menu_rec_guard(0);
     }
 }
 
